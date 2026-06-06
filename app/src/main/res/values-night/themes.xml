@@ -1,16 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Force light theme always (assignment says no dark mode) -->
-    <style name="Base.Theme.Individualarif" parent="Theme.Material3.Light.NoActionBar">
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryVariant">@color/colorPrimaryVariant</item>
-        <item name="colorSecondary">@color/colorSecondary</item>
-        <item name="colorSecondaryVariant">@color/colorSecondaryVariant</item>
-        <item name="colorSurface">@color/colorSurface</item>
-        <item name="android:colorBackground">@color/colorBackground</item>
-        <item name="colorError">@color/colorError</item>
-        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
-        <item name="android:navigationBarColor">@color/colorPrimaryDark</item>
-    </style>
-    <style name="Theme.Individualarif" parent="Base.Theme.Individualarif" />
+<resources>
+
+    <!-- Primary Blue -->
+    <color name="colorPrimary">#0D47A1</color>
+    <color name="colorPrimaryDark">#08306B</color>
+    <color name="colorPrimaryVariant">#1565C0</color>
+
+    <!-- Accent Cyan -->
+    <color name="colorSecondary">#00BCD4</color>
+    <color name="colorSecondaryVariant">#0097A7</color>
+
+    <!-- Background -->
+    <color name="colorSurface">#121212</color>
+    <color name="colorBackground">#121212</color>
+    <color name="colorCardBackground">#1E1E1E</color>
+
+    <!-- Text -->
+    <color name="colorOnSurface">#FFFFFF</color>
+    <color name="colorHint">#9E9E9E</color>
+
+    <!-- Result Cards -->
+    <color name="colorResultBg">#1A2332</color>
+    <color name="colorResultBorder">#1976D2</color>
+    <color name="colorTotalCharges">#64B5F6</color>
+    <color name="colorFinalCost">#00BCD4</color>
+
+    <!-- Status -->
+    <color name="colorError">#EF5350</color>
+    <color name="colorSuccess">#66BB6A</color>
+    <color name="colorWarning">#FFCA28</color>
+
+    <!-- Divider -->
+    <color name="colorDivider">#2C2C2C</color>
+
+    <!-- Common -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <!-- Gradient -->
+    <color name="gradientStart">#0D47A1</color>
+    <color name="gradientEnd">#1976D2</color>
+
 </resources>

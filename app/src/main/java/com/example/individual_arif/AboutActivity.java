@@ -5,6 +5,8 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.TextView;
+import androidx.appcompat.app.AppCompatDelegate;
+import android.widget.Switch;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -14,6 +16,7 @@ import androidx.appcompat.widget.Toolbar;
  * and instructions on how to use the app.
  */
 public class AboutActivity extends AppCompatActivity {
+    private Switch switchDarkMode;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +37,20 @@ public class AboutActivity extends AppCompatActivity {
             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
             startActivity(intent);
         });
+
+        // Dark Mode Switch
+        switchDarkMode = findViewById(R.id.switchDarkMode);
+
+        switchDarkMode.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if (isChecked) {
+                AppCompatDelegate.setDefaultNightMode(
+                        AppCompatDelegate.MODE_NIGHT_YES);
+            } else {
+                AppCompatDelegate.setDefaultNightMode(
+                        AppCompatDelegate.MODE_NIGHT_NO);
+            }
+        });
+
     }
 
     @Override
