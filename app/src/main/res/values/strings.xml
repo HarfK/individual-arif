@@ -71,7 +71,7 @@
     <string name="about_course_code">ICT602 MOBILE TECHNOLOGY</string>
     <string name="about_course_name">Mobile Application Development</string>
     <string name="about_copyright">© 2026 Arif Haikal. All rights reserved.</string>
-    <string name="about_github_url">https://github.com/yourusername/ElecBillCalculator</string>
+    <string name="about_github_url">https://github.com/HarfK/individual-arif</string>
     <string name="about_github_label">You can see my code in my githubb</string>
     <string name="about_app_description">ElecBill Calculator is an Android application that assists Malaysians to determine their monthly bills based on the TNB tiered block rate scheme. Just input the number of units consumed and select the desired rebate, and the application will instantly tell you what your charges and total costs are.</string>
     <string name="about_how_to_use_title">How to Use</string>
