@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:titleTextColor="@color/white"
+            app:navigationIconTint="@color/white" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- ════ VIEW MODE ════ -->
+            <LinearLayout
+                android:id="@+id/viewModeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    app:cardBackgroundColor="@color/colorCardBackground"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:text="BILL DETAILS"
+                            style="@style/SectionHeader" />
+
+                        <!-- Month -->
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:orientation="horizontal" android:layout_marginBottom="10dp">
+                            <TextView android:layout_width="120dp" android:layout_height="wrap_content"
+                                android:text="Month" android:textColor="@color/colorHint" android:textSize="13sp" />
+                            <TextView android:id="@+id/tvDetailMonth" android:layout_width="0dp"
+                                android:layout_height="wrap_content" android:layout_weight="1"
+                                android:text="—" android:textColor="@color/colorOnSurface"
+                                android:textSize="14sp" android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <!-- Units -->
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:orientation="horizontal" android:layout_marginBottom="10dp">
+                            <TextView android:layout_width="120dp" android:layout_height="wrap_content"
+                                android:text="Units Used" android:textColor="@color/colorHint" android:textSize="13sp" />
+                            <TextView android:id="@+id/tvDetailUnits" android:layout_width="0dp"
+                                android:layout_height="wrap_content" android:layout_weight="1"
+                                android:text="—" android:textColor="@color/colorOnSurface"
+                                android:textSize="14sp" android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <!-- Rebate -->
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:orientation="horizontal" android:layout_marginBottom="10dp">
+                            <TextView android:layout_width="120dp" android:layout_height="wrap_content"
+                                android:text="Rebate" android:textColor="@color/colorHint" android:textSize="13sp" />
+                            <TextView android:id="@+id/tvDetailRebate" android:layout_width="0dp"
+                                android:layout_height="wrap_content" android:layout_weight="1"
+                                android:text="—" android:textColor="@color/colorOnSurface"
+                                android:textSize="14sp" android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <!-- Divider -->
+                        <View android:layout_width="match_parent" android:layout_height="1dp"
+                            android:background="@color/colorDivider" android:layout_marginBottom="10dp" />
+
+                        <!-- Total charges -->
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:orientation="horizontal" android:layout_marginBottom="10dp">
+                            <TextView android:layout_width="120dp" android:layout_height="wrap_content"
+                                android:text="Total Charges" android:textColor="@color/colorHint" android:textSize="13sp" />
+                            <TextView android:id="@+id/tvDetailTotal" android:layout_width="0dp"
+                                android:layout_height="wrap_content" android:layout_weight="1"
+                                android:text="RM 0.00" android:textColor="@color/colorTotalCharges"
+                                android:textSize="16sp" android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <!-- Final cost -->
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView android:layout_width="120dp" android:layout_height="wrap_content"
+                                android:text="Final Cost" android:textColor="@color/colorHint" android:textSize="13sp" />
+                            <TextView android:id="@+id/tvDetailFinal" android:layout_width="0dp"
+                                android:layout_height="wrap_content" android:layout_weight="1"
+                                android:text="RM 0.00" android:textColor="@color/colorFinalCost"
+                                android:textSize="20sp" android:textStyle="bold" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Edit / Delete buttons -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button android:id="@+id/btnEdit"
+                        android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:layout_marginEnd="6dp"
+                        android:text="@string/btn_edit"
+                        style="@style/AppButton.Primary" />
+
+                    <Button android:id="@+id/btnDelete"
+                        android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:layout_marginStart="6dp"
+                        android:text="@string/btn_delete"
+                        style="@style/AppButton.Danger" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- ════ EDIT MODE ════ -->
+            <LinearLayout
+                android:id="@+id/editModeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    app:cardBackgroundColor="@color/colorCardBackground"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp" android:text="EDIT RECORD"
+                            style="@style/SectionHeader" />
+
+                        <!-- Month spinner edit -->
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="@string/label_month" android:textSize="14sp"
+                            android:textColor="@color/colorOnSurface" android:layout_marginBottom="4dp" />
+
+                        <Spinner android:id="@+id/spinnerEditMonth"
+                            android:layout_width="match_parent" android:layout_height="48dp"
+                            android:background="@drawable/bg_spinner"
+                            android:paddingStart="12dp" android:paddingEnd="12dp"
+                            android:layout_marginBottom="14dp" />
+
+                        <!-- Units edit -->
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilEditUnits"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="14dp"
+                            android:hint="@string/label_units"
+                            app:helperText="Min 1 kWh – Max 1000 kWh"
+                            app:boxStrokeColor="@color/colorPrimary"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etEditUnits"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="numberDecimal"
+                                android:imeOptions="actionDone"
+                                android:maxLength="7" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!-- Rebate SeekBar edit -->
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="@string/label_rebate" android:textSize="14sp"
+                            android:textColor="@color/colorOnSurface" android:layout_marginBottom="4dp" />
+
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:orientation="horizontal" android:gravity="center_vertical"
+                            android:layout_marginBottom="4dp">
+
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="0%" android:textSize="12sp" android:textColor="@color/colorHint" />
+
+                            <SeekBar android:id="@+id/seekEditRebate"
+                                android:layout_width="0dp" android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginStart="8dp" android:layout_marginEnd="8dp"
+                                android:max="5" android:progress="0"
+                                android:progressTint="@color/colorPrimary"
+                                android:thumbTint="@color/colorPrimary" />
+
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="5%" android:textSize="12sp" android:textColor="@color/colorHint" />
+                        </LinearLayout>
+
+                        <TextView android:id="@+id/tvEditRebateValue"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="0%" android:textSize="18sp" android:textStyle="bold"
+                            android:textColor="@color/colorPrimary" android:layout_marginBottom="12dp" />
+
+                        <!-- Recalculate button -->
+                        <Button android:id="@+id/btnRecalculate"
+                            android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:text="Calculate"
+                            style="@style/AppButton.Primary" />
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Edit result card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardEditResult"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="@color/colorResultBg"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp"
+                    app:strokeColor="@color/colorResultBorder"
+                    app:strokeWidth="2dp">
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:padding="16dp" android:gravity="center_vertical">
+
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="Total Charges" style="@style/ResultLabel" />
+                            <TextView android:id="@+id/tvEditTotal"
+                                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="RM 0.00" android:textColor="@color/colorTotalCharges"
+                                style="@style/ResultValue" />
+                        </LinearLayout>
+
+                        <View android:layout_width="1dp" android:layout_height="50dp"
+                            android:background="@color/colorDivider" android:layout_marginHorizontal="16dp" />
+
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="Final Cost" style="@style/ResultLabel" />
+                            <TextView android:id="@+id/tvEditFinal"
+                                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="RM 0.00" android:textColor="@color/colorFinalCost"
+                                style="@style/ResultValue" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Update / Cancel -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button android:id="@+id/btnUpdate"
+                        android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:layout_marginEnd="6dp"
+                        android:text="@string/btn_update"
+                        style="@style/AppButton.Primary" />
+
+                    <Button android:id="@+id/btnCancel"
+                        android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:layout_marginStart="6dp"
+                        android:text="@string/btn_cancel"
+                        style="@style/AppButton.Secondary" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

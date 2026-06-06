@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ElecBill Calculator</string>
+
+    <!-- Activity titles -->
+    <string name="title_history">Bill History</string>
+    <string name="title_detail">Bill Details</string>
+    <string name="title_about">About</string>
+
+    <!-- Main screen labels -->
+    <string name="label_month">Month</string>
+    <string name="label_units">Electricity Units Used (kWh)</string>
+    <string name="label_rebate">Rebate Percentage (%)</string>
+    <string name="hint_units">Enter units (1 – 1000)</string>
+    <string name="label_total_charges">Total Charges (RM)</string>
+    <string name="label_final_cost">Final Cost After Rebate (RM)</string>
+    <string name="btn_calculate">Calculate</string>
+    <string name="btn_save">Save to Database</string>
+    <string name="btn_clear">Clear</string>
+    <string name="btn_view_history">View History</string>
+    <string name="btn_about">About</string>
+
+    <!-- Month entries -->
+    <string-array name="months">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+    <!-- Rebate entries shown in spinner -->
+    <string-array name="rebate_options">
+        <item>0%</item>
+        <item>1%</item>
+        <item>2%</item>
+        <item>3%</item>
+        <item>4%</item>
+        <item>5%</item>
+    </string-array>
+
+    <!-- Error messages -->
+    <string name="error_units_empty">Please enter the number of units used.</string>
+    <string name="error_units_range">Units must be between 1 and 1000 kWh.</string>
+    <string name="error_calculate_first">Please calculate the bill first before saving.</string>
+
+    <!-- Success / info messages -->
+    <string name="msg_saved">Bill record saved successfully!</string>
+    <string name="msg_deleted">Record deleted.</string>
+    <string name="msg_updated">Record updated successfully!</string>
+    <string name="msg_no_records">No records found. Start by calculating a bill.</string>
+
+    <!-- Detail / edit screen -->
+    <string name="btn_edit">Edit</string>
+    <string name="btn_delete">Delete</string>
+    <string name="btn_update">Update</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="confirm_delete_title">Delete Record</string>
+    <string name="confirm_delete_msg">Are you sure you want to delete this bill record?</string>
+
+    <!-- About page -->
+    <string name="about_student_name">Arif Haikal</string>
+    <string name="about_student_id">2025367885</string>
+    <string name="about_course_code">ICT602 MOBILE TECHNOLOGY</string>
+    <string name="about_course_name">Mobile Application Development</string>
+    <string name="about_copyright">© 2026 Arif Haikal. All rights reserved.</string>
+    <string name="about_github_url">https://github.com/yourusername/ElecBillCalculator</string>
+    <string name="about_github_label">You can see my code in my githubb</string>
+    <string name="about_app_description">ElecBill Calculator is an Android application that assists Malaysians to determine their monthly bills based on the TNB tiered block rate scheme. Just input the number of units consumed and select the desired rebate, and the application will instantly tell you what your charges and total costs are.</string>
+    <string name="about_how_to_use_title">How to Use</string>
+    <string name="about_how_to_use">1. Select the billing month from the dropdown.\n2. Enter the number of electricity units used (1–1000 kWh) in the input field.\n3. Choose the rebate percentage (0%–5%) using the slider.\n4. Tap CALCULATE to see the total charges and final cost.\n5. Tap SAVE TO DATABASE to store the record.\n6. Tap VIEW HISTORY to browse all saved records.\n7. In the History screen, tap any entry to view its full details, or to edit/delete it.</string>
+    <string name="about_tariff_title">TNB Domestic Tariff (Peninsular Malaysia)</string>
+    <string name="about_tariff">Block 1 (1–200 kWh): 21.8 sen/kWh\nBlock 2 (201–300 kWh): 33.4 sen/kWh\nBlock 3 (301–600 kWh): 51.6 sen/kWh\nBlock 4 (601–1000 kWh): 54.6 sen/kWh</string>
+
+    <!-- Instruction banner on main screen -->
+    <string name="instruction_banner">Select a month, enter units (1–1000 kWh), choose rebate, then tap Calculate.</string>
+</resources>

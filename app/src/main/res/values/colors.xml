@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary brand colours – electric blue/teal theme -->
+    <color name="colorPrimary">#1565C0</color>
+    <color name="colorPrimaryDark">#0D47A1</color>
+    <color name="colorPrimaryVariant">#1976D2</color>
+    <color name="colorSecondary">#00ACC1</color>
+    <color name="colorSecondaryVariant">#00838F</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="colorOnSecondary">#FFFFFF</color>
+
+    <!-- Surface / background -->
+    <color name="colorSurface">#F5F9FF</color>
+    <color name="colorBackground">#EEF4FB</color>
+    <color name="colorCardBackground">#FFFFFF</color>
+    <color name="colorOnSurface">#1A1A2E</color>
+
+    <!-- Result highlight -->
+    <color name="colorResultBg">#E3F2FD</color>
+    <color name="colorResultBorder">#1565C0</color>
+    <color name="colorTotalCharges">#1565C0</color>
+    <color name="colorFinalCost">#00838F</color>
+
+    <!-- Status colours -->
+    <color name="colorError">#D32F2F</color>
+    <color name="colorSuccess">#2E7D32</color>
+    <color name="colorWarning">#F57F17</color>
+
+    <!-- Divider / hint -->
+    <color name="colorDivider">#B0BEC5</color>
+    <color name="colorHint">#90A4AE</color>
+
+    <!-- White / black -->
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+
+    <!-- Title-bar gradient start/end used programmatically -->
+    <color name="gradientStart">#1565C0</color>
+    <color name="gradientEnd">#00ACC1</color>
+</resources>
